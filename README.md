@@ -9,19 +9,6 @@
     　　$this->post = array_merge($this->post, $this->input->post());  
 <br />
 ##### CI-Smarty
-这个方案多了一点就是它扩展了核心类，它将Smarty类方法assign和display扩展到Ci的控制器中，所以我们在CI中使用Smarty的时候可以像这样使用：
-<pre><code>
-    public function index()
-    {
-        //$this->load->view('welcome_message');
-        $data['title'] = '标题';
-        $data['num'] = '123456789';
-        $this->assign('data',$data);
-        $this->assign('tmp','hello');
-        $this->display('test.html');
-    }
-</code></pre>
-<br/>
 ######配置方法
 CI版本：2.2   
 Smarty版本：Smarty-3.1.21   
@@ -85,7 +72,7 @@ class MY_Controller extends CI_Controller {
     } 
 } 
 </code></pre>
-配置完毕 
+配置完毕  
 
 ######使用方法实例
 在控制器中如： 
