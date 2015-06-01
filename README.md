@@ -16,9 +16,7 @@ Codeigniter and Smarty Bundle
 自己对比了一下这些教程，我认为下面这个方案是所有里面最优秀的，强烈推荐给大家(当然也是我自己采取的方案)  
 出处:http://www.cnmiss.cn/?p=261  
 原文里面的一些错误，我在本文里面已经做了修正   
-<br/>
 ------------------------------------------------------------------
-<br/>
 下面说下我认为它更加优秀的原因，对比下这个方案和我们论坛的方案，你会发现，这个方案多了一点就是它扩展了核心类，
 它将Smarty类方法assign和display扩展到Ci的控制器中，所以我们在CI中使用Smarty的时候可以像这样使用：
 <pre><code>
@@ -97,18 +95,16 @@ class MY_Controller extends CI_Controller {
     } 
 
     public function assign($key,$val) { 
-        $this->cismarty->assign($key,$val); 
+        $this-&gt;cismarty-&gt;assign($key,$val); 
     } 
 
     public function display($html) { 
-        $this->cismarty->display($html); 
+        $this-&gt;cismarty-&gt;display($html); 
     } 
 } 
 </code></pre>
 配置完毕 
-<br/>
 -------------------------------------------------------------------  
-<br/>
 ######使用方法实例
 在控制器中如： 
 <pre><code>
@@ -120,11 +116,11 @@ class Welcome extends MY_Controller { // 原文这里写错
         //$this->load->view('welcome_message'); 
         $data['title'] = '标题'; 
         $data['num'] = '123456789'; 
-        //$this->cismarty->assign('data',$data); // 亦可 
-        $this->assign('data',$data); 
-        $this->assign('tmp','hello'); 
-        //$this->cismarty->display('test.html'); // 亦可 
-        $this->display('test.html'); 
+        //$this-&gt;cismarty-&gt;assign('data',$data); // 亦可 
+        $this-&gt;assign('data',$data); 
+        $this-&gt;assign('tmp','hello'); 
+        //$this-&gt;cismarty-&gt;display('test.html'); // 亦可 
+        $this-&gt;display('test.html'); 
     } 
 } 
 </code></pre>
