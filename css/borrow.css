@@ -1,0 +1,9 @@
+#myModal .msgbox.label-important {
+	background-color: red;
+	font-size: 14px;
+}
+
+#myModal .msgbox.label-success {
+	background-color: green;
+	font-size: 14px;
+}

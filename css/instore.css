@@ -1,0 +1,23 @@
+.row {
+	margin-bottom: 50px;
+}
+
+
+#upload-file-wrap {
+	float: left;
+	width: 380px;
+	height: 47px;
+	line-height: 47px;
+}
+
+#upload-button-wrap {
+	float: left;
+	height: 47px;
+	line-height: 47px;
+}
+
+#plrk .notice {
+	display:block;
+	clear:both; 
+	padding-top:20px;
+}
